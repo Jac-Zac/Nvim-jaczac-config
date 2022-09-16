@@ -24,22 +24,23 @@ dashboard.section.footer.val = {
 
 -- Custom Section
 dashboard.section.buttons.val = {
-	  dashboard.button("n", "  Create New file",       ":set laststatus=3 | :ene <BAR> startinsert <CR>"),
     dashboard.button("r", "  Open Recent Files",     ":set laststatus=3 | :Telescope oldfiles <CR>"),
+    dashboard.button("f", "  Search Files",     ":set laststatus=3 | :Telescope find_files<CR>"),
+	dashboard.button("n", "  Create New file",       ":set laststatus=3 | :ene <BAR> startinsert <CR>"),
     dashboard.button("v", "  Neovim Settings",       ":set laststatus=3 | e ~/.config/nvim/init.lua <CR>"),
 	  dashboard.button("u", "  Update Nvim Plugins",   ":PackerSync <CR>"),
 	  dashboard.button("q", "  Quit Neovim",           ":qa<CR>"),
 }
 
--- Luavim Ascii Art
-dashboard.section.header.val = {
-    [[██╗     ██╗   ██╗  █████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
-    [[██║     ██║   ██║ ██╔══██╗ ██║   ██║ ██║ ████╗ ████║]],
-    [[██║     ██║   ██║ ███████║ ██║   ██║ ██║ ██╔████╔██║]],
-    [[██║     ██║   ██║ ██╔══██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
-    [[███████╗╚██████╔╝ ██║  ██║  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
-    [[╚══════╝ ╚═════╝  ╚═╝  ╚═╝   ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
-}
+-- -- Luavim Ascii Art
+-- dashboard.section.header.val = {
+--     [[██╗     ██╗   ██╗  █████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
+--     [[██║     ██║   ██║ ██╔══██╗ ██║   ██║ ██║ ████╗ ████║]],
+--     [[██║     ██║   ██║ ███████║ ██║   ██║ ██║ ██╔████╔██║]],
+--     [[██║     ██║   ██║ ██╔══██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
+--     [[███████╗╚██████╔╝ ██║  ██║  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
+--     [[╚══════╝ ╚═════╝  ╚═╝  ╚═╝   ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
+-- }
 
 -- Layout for luavim ascii art
 dashboard.config.layout = {
@@ -51,15 +52,17 @@ dashboard.config.layout = {
     dashboard.section.footer,
 }
 
--- -- Neovim ascii art
--- dashboard.section.header.val = {
---     [[███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
---     [[████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
---     [[██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
---     [[██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
---     [[██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
---     [[╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
--- }
+-- Neovim ascii art
+dashboard.section.header.val = {
+    [[███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
+    [[████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
+    [[██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
+    [[██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
+    [[██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
+    [[╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
+
+     [[ TIP: To exit Neovim, just power off your computer. ]],
+}
 
 -- -- Layout for Neovim ascii art
 -- dashboard.config.layout = {
