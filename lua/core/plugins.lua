@@ -60,7 +60,7 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim"             -- A use-package inspired plugin manager for Neovim
 
     use "emakman/nvim-latex-previewer"       -- nvim-latex-previewer
-    use 'ixru/nvim-markdown'                 -- Better Markdown
+--    use 'ixru/nvim-markdown'                 -- Better Markdown
     use 'shaunsingh/nord.nvim'               -- Nord theme
     use {
         'nvim-lualine/lualine.nvim',
