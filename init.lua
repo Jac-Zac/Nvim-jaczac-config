@@ -13,7 +13,6 @@ local core_modules = {
  "core/options",           -- General Options
 
 ---- Plugin Configurations --------------------------
- "configs/general",        -- General configurations
  "configs/impatient",      -- Improve Startup Time
  "configs/colorschemes",   -- All Colorschemes
  "configs/treesitter",     -- Syntax Highlighting
@@ -27,6 +26,7 @@ local core_modules = {
  "configs/neoscroll",      -- Smooth Scrolling
  "configs/toggleterm",     -- Floating Terminal
  "configs/telescope",      -- Fuzzy finder
+ "configs/general",        -- General configurations
 
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities
