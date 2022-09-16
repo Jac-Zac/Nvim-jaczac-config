@@ -24,6 +24,7 @@ set.incsearch = true                         -- Sets incremental search
 set.mouse = 'a'                              -- Enable mouse support
 set.shell = "/bin/zsh"                       -- Set your shell to bash or zsh
 set.shortmess:append "sI"                    -- Disable nvim intro
+vim.cmd [[set spell]]                        -- Set spellcheck
 vim.cmd [[set nobackup]]                     -- Creates a backup file
 vim.cmd [[set nowritebackup]]                -- Creates a backup file i guess
 vim.cmd [[set formatoptions-=cro]]           -- Stop newline continution of comments
