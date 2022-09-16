@@ -1,7 +1,3 @@
-
-/* ![luavim](img/screenshot1.png?raw=true) */
-/* ![tree+split](img/screenshot2.png?raw=true) */
-
 ## Description
 
 * **Luavim** is a simple **neovim** configuration written in **lua**, aiming to provide a **base** config, so users could tweak the defaults, remove the things they don't like, and build their config on top of it.
@@ -40,40 +36,40 @@
 ## Directory Tree
 
 ```bash
-├──  ftplugin
-│   └──  lua.lua
-├──  img
-│   ├──  checkhealth.png
-│   ├──  screenshot1.png
-│   └──  screenshot2.png
-├──  lua
-│   ├──  configs
-│   │   ├──  alpha.lua
-│   │   ├──  colorizer.lua
-│   │   ├──  colorschemes.lua
-│   │   ├──  commentary.lua
-│   │   ├──  completion.lua
-│   │   ├──  general.lua
-│   │   ├──  gitsigns.lua
-│   │   ├──  impatient.lua
-│   │   ├──  lualine.lua
-│   │   ├──  neoscroll.lua
-│   │   ├──  nvimtree.lua
-│   │   ├──  statusline.lua
-│   │   ├──  telescope.lua
-│   │   ├──  toggleterm.lua
-│   │   └──  treesitter.lua
-│   ├──  core
-│   │   ├──  keymaps.lua
-│   │   ├──  options.lua
-│   │   └──  plugins.lua
-│   └──  utils
-│       └──  utils.lua
-├──  plugin
-│   └──  packer_compiled.lua
-├──  init.lua
-├──  LICENSE
-└──  README.md
+├── ftplugin
+│   └── lua.lua
+├── img
+│   ├── checkhealth.png
+│   ├── screenshot1.png
+│   └── screenshot2.png
+├── lua
+│   ├── configs
+│   │   ├── alpha.lua
+│   │   ├── colorizer.lua
+│   │   ├── colorschemes.lua
+│   │   ├── commentary.lua
+│   │   ├── completion.lua
+│   │   ├── general.lua
+│   │   ├── gitsigns.lua
+│   │   ├── impatient.lua
+│   │   ├── lualine.lua
+│   │   ├── neoscroll.lua
+│   │   ├── nvimtree.lua
+│   │   ├── statusline.lua
+│   │   ├── telescope.lua
+│   │   ├── toggleterm.lua
+│   │   └── treesitter.lua
+│   ├── core
+│   │   ├── keymaps.lua
+│   │   ├── options.lua
+│   │   └── plugins.lua
+│   └── utils
+│       └── utils.lua
+├── plugin
+│   └── packer_compiled.lua
+├── init.lua
+├── LICENSE
+└── README.md
 ```
 
 ## Installation
@@ -101,8 +97,6 @@ git clone https://github.com/elairavi/luavim.git ~/.config/nvim
 ## Configuration check
 
 - Open neovim with this flag `nvim +checkhealth` you should not see any errors in the output (except for the one related to Python):
-
-/* ![checkhealth](/img/checkhealth.png?raw=true) */
 
 * Note: If you're having a problem or some kinda of an error with a plugin, just run these commands:
 ```term
