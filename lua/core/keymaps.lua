@@ -18,6 +18,13 @@ vim.g.maplocalleader = " "
 -----------------
 -- Normal Mode --
 -----------------
+map("n", "<F1>", ":setlocal spell spelllang=en_us<CR>", {})
+map("n", "<F2>", ":setlocal spell spelllang=it<CR>", {})
+map("n", "<F3>", ":NvimTreeOpen<CR>", {})
+map("n", "<F4>", ":MarkdownPreview<CR>", {})
+map("n", "<F5>", ":<CR>", {})
+map("n", "<F5>", ":! open $(echo % <bar> sed 's/.tex/.pdf/') & <CR>", {})
+
 -- Mappings for moving through splits
 map("n", "<A-h>", "<C-w>h", {})
 map("n", "<A-j>", "<C-w>j", {})
@@ -30,29 +37,13 @@ map("n", "<C-j>", ":resize +2<cr>", {})
 map("n", "<C-k>", ":resize -2<cr>", {})
 map("n", "<C-l>", ":vertical resize -2<cr>", {})
 
--- Alternate way to save and quit nvim
-map("n", "<A-w>", ":w<CR>", {})  -- save file
-map("n", "<A-q>", ":q<CR>", {})  -- quit nvim
-map("n", "<A-1>", ":q!<CR>", {}) -- quit without saving
-
--- Nvim Comment
-map("n", "<leader>c", ":CommentToggle<CR>", {}) -- Comment One Line
-map("n", "<leader>p", "vip:CommentToggle<CR>", {}) -- Comment A Paragraph
-map("x", "<leader>c", ":'<,'>CommentToggle<CR>", {}) -- Comment Multiple Lines In Visual Mode
-
--- Don't accidently create macros when trying to quit
-map('n', 'Q', 'q', {})
-map('n', 'q', '<nop>', {})
-
--- GitSings
-map('n', "<leader>gp", ":Gitsigns preview_hunk<CR>", {})  -- preview_hunk
-map('n', "<leader>gr", ":Gitsigns reset_buffer<CR>", {})  -- reset_buffer
-
 -- Toggle Alpha Dashboard
 map('n', "<leader>a", ":set laststatus=3<CR> | :Alpha<CR>", {})
 
 -- Toggle NvimTree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", {})
+
+map("n", "<leader>m", ":MarkdownPreview<CR>", {})
 
 -- Yank entire line
 map("n", "yie", ":<C-u>%y<CR>", {})
@@ -94,6 +85,12 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap " ""<left>
 inoremap ' ''<left>
 ]])
+
+
+-- Nvim Comment
+map("n", "<leader>c", ":CommentToggle<CR>", {}) -- Comment One Line
+map("n", "<leader>p", "vip:CommentToggle<CR>", {}) -- Comment A Paragraph
+map("x", "<leader>c", ":'<,'>CommentToggle<CR>", {}) -- Comment Multiple Lines In Visual Mode
 
 -----------------
 -- Visual Mode --

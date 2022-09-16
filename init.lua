@@ -13,6 +13,7 @@ local core_modules = {
  "core/options",           -- General Options
 
 ---- Plugin Configurations --------------------------
+ "configs/general",        -- General configurations
  "configs/impatient",      -- Improve Startup Time
  "configs/colorschemes",   -- All Colorschemes
  "configs/treesitter",     -- Syntax Highlighting
@@ -38,3 +39,11 @@ for _, module in ipairs(core_modules) do
       return
     end
 end
+
+-- Vim command to open new MarkdownPreview window
+-- vim.cmd([[
+--	function OpenMarkdownPreview (url)
+--	    execute "! open -n " . a:url
+--	endfunction
+--	    let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+--]])

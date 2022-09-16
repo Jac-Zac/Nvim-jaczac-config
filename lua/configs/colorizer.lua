@@ -12,7 +12,7 @@ if not status_ok then
 end
 
 colorizer.setup({ "*" }, {
-    RGB      = true;      -- #RGB hex codes
+      RGB      = true;      -- #RGB hex codes
 	  RRGGBB   = true;      -- #RRGGBB hex codes
 	  RRGGBBAA = true;      -- #RRGGBBAA hex codes
 	  rgb_fn   = true;      -- CSS rgb() and rgba() functions

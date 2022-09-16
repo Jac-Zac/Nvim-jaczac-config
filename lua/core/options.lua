@@ -38,8 +38,8 @@ set.pumheight = 15                           -- Makes popup menu smaller
 set.ruler = true              	             -- Show the cursor position all the time
 set.splitbelow = true                        -- Horizontal splits will automatically be below
 set.splitright = true                        -- Vertical splits will automatically be to the right
-set.conceallevel = 0                         -- So that I can see `` in markdown files
-set.tabstop = 2                              -- Insert 2 spaces for a tab
+-- set.conceallevel = 0                         -- So that I can see `` in markdown files
+set.tabstop = 4                              -- Insert 2 spaces for a tab
 set.number = true                            -- Line numbers
 set.background = "dark"                      -- Tell vim what the background color looks like
 set.virtualedit = "onemore"                  -- With This option you can move the cursor one character over the end
@@ -50,12 +50,12 @@ set.laststatus=3                             -- Always display the status line
 set.title = true                             -- Show current txt that you editing
 set.relativenumber = false                   -- Vim’s absolute, relative and hybrid line numbers
 set.cursorline = true                        -- Enable highlighting of the current line
-set.shiftwidth = 2                           -- Change the number of space characters inserted for indentation
+set.shiftwidth = 4                           -- Change the number of space characters inserted for indentation
 set.showtabline = 1                          -- Always show tabs
 set.cmdheight = 1                            -- More space for displaying messages
 set.numberwidth = 5                          -- Set number column width to 2 {default 4}
 set.foldenable = false                       -- Disable folding text
-vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
+-- vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
 vim.cmd [[set noshowmode]]                   -- We don't need to see things like -- INSERT -- anymore
 vim.cmd [[syntax enable]]                    -- Enables syntax highlighing
 vim.cmd [[set t_Co=256]]                     -- Support 256 colors

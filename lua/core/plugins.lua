@@ -57,13 +57,19 @@ return packer.startup(function(use)
    				require("gitsigns")
    			end
     }
-
     use "wbthomason/packer.nvim"             -- A use-package inspired plugin manager for Neovim
+
+    use "emakman/nvim-latex-previewer"       -- nvim-latex-previewer
+    use 'ixru/nvim-markdown'                 -- Better Markdown
+    use 'shaunsingh/nord.nvim'               -- Nord theme
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
     use "kyazdani42/nvim-web-devicons"       -- Lua fork of vim-web-devicons for neovim
     use "kyazdani42/nvim-tree.lua"           -- A file explorer tree for neovim written in lua
     use "nvim-treesitter/nvim-treesitter"    -- Treesitter Syntax highlighting and abstraction layer
-    use "nvim-lualine/lualine.nvim"          -- Fast and easy statusline for neovim
-    use "shaunsingh/nord.nvim"               -- Neovim theme based off of the Nord Color Palette
     use "goolord/alpha-nvim"                 -- Lua powered greeter like vim-startify / dashboard-nvim
     use "akinsho/nvim-toggleterm.lua"        -- Plugin to easily toggle a terminal
     use "terrortylor/nvim-comment"           -- Comment toggler for Neovim written in Lua
@@ -77,6 +83,9 @@ return packer.startup(function(use)
     use 'nvim-telescope/telescope.nvim'      -- Find, filter, preview, pick. all lua, with telescope
     use 'nvim-lua/plenary.nvim'              -- Plenary, a dependency of telescope
 
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }) -- markdown-preview
+
+    use 'ggandor/lightspeed.nvim'            -- Fast Search
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
