@@ -24,8 +24,8 @@ dashboard.section.footer.val = {
 
 -- Custom Section
 dashboard.section.buttons.val = {
-    dashboard.button("r", "  Open Recent Files",     ":set laststatus=3 | :Telescope oldfiles <CR>"),
-    dashboard.button("f", "  Search Files",     ":set laststatus=3 | :Telescope find_files<CR>"),
+    dashboard.button("r", "  Open Recent Files", ":set laststatus=3 | :Telescope oldfiles <CR>"),
+    dashboard.button("g", "  Search string",     ":set laststatus=3 | :Telescope live_grep<CR>"),
 	dashboard.button("n", "  Create New file",       ":set laststatus=3 | :ene <BAR> startinsert <CR>"),
     dashboard.button("v", "  Neovim Settings",       ":set laststatus=3 | e ~/.config/nvim/init.lua <CR>"),
 	  dashboard.button("u", "  Update Nvim Plugins",   ":PackerSync <CR>"),

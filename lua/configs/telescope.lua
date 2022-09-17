@@ -11,6 +11,7 @@ if not status_ok then
    return
 end
 
+
 local actions = require "telescope.actions"
 
 -- Telescope options
@@ -33,5 +34,13 @@ telescope.setup {
         ["<C-h>"] = actions.select_horizontal,
       },
     },
+  },
+    pickers = {
+    live_grep = {
+        theme = "dropdown",
+    }
+      extensions = {
+    -- ...
+  }
   },
 }

@@ -96,10 +96,9 @@ map("x", "<leader>c", ":'<,'>CommentToggle<CR>", {}) -- Comment Multiple Lines I
 -----------------
 -- Move Text Up And Down
 vim.cmd([[
-nnoremap <C-A-J> :m .+1<CR>==
-nnoremap <C-A-K> :m .-2<CR>==
-inoremap <C-A-J> <Esc>:m .+1<CR>==gi
-inoremap <C-A-K> <Esc>:m .-2<CR>==gi
-vnoremap <C-A-J> :m '>+1<CR>gv=gv
-vnoremap <C-A-K> :m '<-2<CR>gv=gv
+" move selected lines up one line
+xnoremap <C-k>  :m-2<CR>gv=gv
+
+" move selected lines down one line
+xnoremap <C-j> :m'>+<CR>gv=gv
 ]])

@@ -67,6 +67,17 @@ return packer.startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- Easy way to surround and delete things around a selection or inside functions 
+    use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+    })
+
     use "kyazdani42/nvim-web-devicons"       -- Lua fork of vim-web-devicons for neovim
     use "kyazdani42/nvim-tree.lua"           -- A file explorer tree for neovim written in lua
     use "nvim-treesitter/nvim-treesitter"    -- Treesitter Syntax highlighting and abstraction layer
