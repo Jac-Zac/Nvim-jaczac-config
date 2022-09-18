@@ -9,8 +9,8 @@ cmp.setup({
   -- You should specify your *installed* sources.
   sources = {
     { name = 'buffer' },
-    { name = 'path' },
     { name = 'nvim_lsp' },
     { name = 'ultisnips' },
+    { name = 'path' },
   },
 })

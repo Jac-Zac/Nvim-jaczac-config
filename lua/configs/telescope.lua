@@ -1,4 +1,3 @@
-
 --[[-------------------------------------]--
 --        telescope - fuzzy finder        --
 --    Author: ChristianChiarulli, elai    --
@@ -10,7 +9,6 @@ local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
    return
 end
-
 
 local actions = require "telescope.actions"
 
@@ -34,13 +32,5 @@ telescope.setup {
         ["<C-h>"] = actions.select_horizontal,
       },
     },
-  },
-    pickers = {
-    live_grep = {
-        theme = "dropdown",
-    }
-      extensions = {
-    -- ...
-  }
   },
 }

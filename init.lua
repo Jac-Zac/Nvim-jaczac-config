@@ -13,21 +13,21 @@ local core_modules = {
  "core/options",           -- General Options
 
 ---- Plugin Configurations --------------------------
- "configs/general",        -- General configurations
- "configs/cmp",            -- Cmp configurations
- "configs/impatient",      -- Improve Startup Time
  "configs/colorschemes",   -- All Colorschemes
- "configs/treesitter",     -- Syntax Highlighting
  "configs/completion",     -- Auto Completion
- "configs/alpha",          -- Wellcome Screen
+ "configs/treesitter",     -- Syntax Highlighting
+ "configs/impatient",      -- Improve Startup Time
  "configs/nvimtree",       -- File Explorer
+ "configs/markdown",       -- General configurations
+ "configs/alpha",          -- Wellcome Screen
  "configs/gitsigns",       -- Git Integration
  "configs/commentary",     -- Easily Comment Lines
  "configs/statusline",     -- Status Line
  "configs/colorizer",      -- Colors Highlighter
  "configs/neoscroll",      -- Smooth Scrolling
- "configs/toggleterm",     -- Floating Terminal
  "configs/telescope",      -- Fuzzy finder
+ "configs/barbar",         -- Tab-bar for the buffers
+ "configs/cmp",            -- Cmp configurations
 
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities
