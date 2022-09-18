@@ -52,8 +52,8 @@ map("n", "<leader>u", ":PackerSync<CR>", {})
 
 -- Telescope Mappings
 map("n", "<Leader>b", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", {}) -- preview buffers
-map("n", "<Leader>of", "<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", {}) -- old files
-map("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", {}) -- Find files
+map("n", "<Leader>of", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", {}) -- old files
+map("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", {}) -- Find files
 map("n", "<leader>gs", ":Telescope git_status<CR>", {}) -- git status
 
 -----------------
@@ -71,18 +71,21 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 ]])
 
+
+-- Auto close brackets I don't like it '
+-- inoremap ( ()<left>
+-- inoremap [ []<left>
+-- inoremap { {}<left>
+-- inoremap " ""<left>
+-- inoremap ' ''<left>
+
 -- Auto Pairs
 vim.cmd([[
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0
 inoremap {;<CR> {<CR>};<ESC>0
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap " ""<left>
-inoremap ' ''<left>
 ]])
 
 
