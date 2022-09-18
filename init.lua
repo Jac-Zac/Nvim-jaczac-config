@@ -14,6 +14,7 @@ local core_modules = {
 
 ---- Plugin Configurations --------------------------
  "configs/general",        -- General configurations
+ "configs/cmp",            -- Cmp configurations
  "configs/impatient",      -- Improve Startup Time
  "configs/colorschemes",   -- All Colorschemes
  "configs/treesitter",     -- Syntax Highlighting
