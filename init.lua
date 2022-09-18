@@ -13,7 +13,6 @@ local core_modules = {
  "core/options",           -- General Options
 
 ---- Plugin Configurations --------------------------
- "configs/colorschemes",   -- All Colorschemes
  "configs/completion",     -- Auto Completion
  "configs/treesitter",     -- Syntax Highlighting
  "configs/impatient",      -- Improve Startup Time
