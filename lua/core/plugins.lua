@@ -54,6 +54,7 @@ return packer.startup(function(use)
 
 --  All the plugins I use
     use 'shaunsingh/nord.nvim'               -- Nord theme
+    use 'rcarriga/nvim-notify'               -- nvim-notify for notification
     use "kyazdani42/nvim-web-devicons"       -- Lua fork of vim-web-devicons for neovim
     use "kyazdani42/nvim-tree.lua"           -- A file explorer tree for neovim written in lua
     use "goolord/alpha-nvim"                 -- Lua powered greeter like vim-startify / dashboard-nvim
@@ -70,7 +71,7 @@ return packer.startup(function(use)
 
     use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }) -- markdown-preview
     use({'nvim-lualine/lualine.nvim',requires = { 'kyazdani42/nvim-web-devicons', opt = true }}) -- Cool looking icons
-    use({"kylechui/nvim-surround", tag = "*", config = function() require("nvim-surround").setup({}) end }) -- Easy way to surround and delete things around a selection or inside functions 
+    use({"kylechui/nvim-surround", tag = "*", config = function() require("nvim-surround").setup({}) end }) -- Easy way to surround and delete things around a selection or inside functions
     use ({'lewis6991/gitsigns.nvim', event = { "CursorMoved", "CursorMovedI" }, config = function() require("gitsigns") end}) -- Git integration for buffers
     use({'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}) -- Buffer bars
 
@@ -80,7 +81,7 @@ return packer.startup(function(use)
     use({'hrsh7th/cmp-path'})
     use({'hrsh7th/cmp-nvim-lsp'})
     use({'quangnguyen30192/cmp-nvim-ultisnips'})
-    
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

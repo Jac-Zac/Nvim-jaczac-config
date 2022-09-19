@@ -32,6 +32,7 @@ vim.cmd [[set complete+=kspell]]             -- Auto complete with spellcheck
 vim.cmd [[set completeopt=menuone,longest]]  -- Auto complete menu (It's pretty great)
 vim.cmd [[set nocompatible]]                 -- Disable compatibility to old-time vi
 vim.cmd [[colorscheme nord]]                 -- Set colorscheme
+vim.notify = require("notify")               -- Enable notify
 -- vim.g.vimtex_view_method = "zathura"         -- Viewing method
 
 ---------------

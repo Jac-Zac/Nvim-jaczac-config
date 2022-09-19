@@ -1,4 +1,3 @@
-
 --[[------------------------------------]]--
 --       keymaps - general mappings       --
 --             Author: elai               --
