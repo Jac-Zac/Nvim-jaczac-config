@@ -27,7 +27,7 @@ local core_modules = {
  "configs/barbar",         -- Tab-bar for the buffers
 
 ---- LSP Utilities --------------------------------
- "lsp/configs",		       --  Lsp configurations
+ "lsp/init",		       --  Lsp configurations
 
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities
