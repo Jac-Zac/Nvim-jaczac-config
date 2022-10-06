@@ -15,7 +15,12 @@ lspconfig.util.default_config = vim.tbl_extend(
 
 -- 3. Loop through all of the installed servers and set it up via lspconfig
 for _, server in ipairs(lsp_installer.get_installed_servers()) do
-  lspconfig[server.name].setup {}
+    local opts = {
+		on_attach = require("lsp.handlers").on_attach,
+		capabilities = require("lsp.handlers").capabilities,
+	}
+
+    lspconfig[server.name].setup {}
 end
 
 -- Set up Null-ls

@@ -29,6 +29,7 @@ local core_modules = {
  "lsp/install",            -- Configuration for lsp-install
  "lsp/config",             -- Configuration for lspconfig
  "lsp/completion",         -- Auto Completion
+ "lsp/handlers",           -- Beautify
 
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities
