@@ -12,7 +12,6 @@ local core_modules = {
  "core/options",           -- General Options
 
 ---- Plugin Configurations --------------------------
- "configs/completion",     -- Auto Completion
  "configs/treesitter",     -- Syntax Highlighting
  "configs/impatient",      -- Improve Startup Time
  "configs/nvimtree",       -- File Explorer
@@ -27,7 +26,9 @@ local core_modules = {
  "configs/barbar",         -- Tab-bar for the buffers
 
 ---- LSP Utilities --------------------------------
- "lsp/init",		       --  Lsp configurations
+ "lsp/install",            -- Configuration for lsp-install
+ "lsp/config",             -- Configuration for lspconfig
+ "lsp/completion",         -- Auto Completion
 
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities

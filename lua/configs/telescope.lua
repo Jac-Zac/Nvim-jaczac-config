@@ -1,9 +1,3 @@
---[[-------------------------------------]--
---        telescope - fuzzy finder        --
---    Author: ChristianChiarulli, elai    --
---            License: GPLv3              --
---[[------------------------------------]]--
-
 -- Load telescope with a protected call
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
@@ -34,3 +28,7 @@ telescope.setup {
     },
   },
 }
+
+-- To get telescope-file-browser loaded and working with telescope,
+-- you need to call load_extension, somewhere after setup function:
+require("telescope").load_extension "file_browser"

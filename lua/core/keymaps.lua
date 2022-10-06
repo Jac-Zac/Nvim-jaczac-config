@@ -53,7 +53,7 @@ map("n", "<leader>u", ":PackerSync<CR>", {})
 -- Telescope Mappings
 map("n", "<Leader>b", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", {}) -- preview buffers
 map("n", "<Leader>of", "<cmd>lua require'telescope.builtin'.oldfiles()<cr>", {}) -- old files
-map("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", {}) -- Find files
+map("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.file_browser()<cr>", {}) -- Find files
 map("n", "<Leader>l", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", {}) -- Live grep into your folder
 map("n", "<leader>gs", ":Telescope git_status<CR>", {}) -- git status
 

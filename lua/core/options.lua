@@ -60,10 +60,10 @@ set.numberwidth = 5                          -- Set number column width to 2 {de
 set.foldenable = false                       -- Disable folding text
 -- vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
 vim.cmd [[set noshowmode]]                   -- We don't need to see things like -- INSERT -- anymore
-vim.cmd [[syntax enable]]                    -- Enables syntax highlighing
 vim.cmd [[set t_Co=256]]                     -- Support 256 colors
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"         -- Breaks Space-Time Continuum
 -- vim.cmd [[set nowrap]]                       -- Display long lines as just one line
+-- vim.cmd [[syntax enable]]                    -- Enables syntax highlighing
 
 -----------------
 -- Memory, CPU --
