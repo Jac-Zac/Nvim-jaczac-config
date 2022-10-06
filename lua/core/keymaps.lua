@@ -20,8 +20,9 @@ vim.g.maplocalleader = " "
 map("n", "<F1>", ":setlocal spell spelllang=en_us<CR>", {})
 map("n", "<F2>", ":setlocal spell spelllang=it<CR>", {})
 map("n", "<F3>", ":NvimTreeOpen<CR>", {})
-map("n", "<F4>", ":! open $(echo % <bar> sed 's/.tex/.pdf/') & <CR>", {})
-map("n", "<F5>", ":MarkdownPreview<CR>", {})
+map("n", "<F4>", ":MarkdownPreview<CR>", {})
+map("n", "<F5>", ": silent ! zathura $(echo % <bar> sed 's/.tex/.pdf/') & <CR>", {})
+
 
 -- Mappings for moving through splits
 map("n", "<A-h>", "<C-w>h", {})

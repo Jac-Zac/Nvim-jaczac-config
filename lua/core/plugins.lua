@@ -57,7 +57,6 @@ return packer.startup(function(use)
     use 'rcarriga/nvim-notify'               -- nvim-notify for notification
     use "kyazdani42/nvim-web-devicons"       -- Lua fork of vim-web-devicons for neovim
     use "kyazdani42/nvim-tree.lua"           -- A file explorer tree for neovim written in lua
-    use "L3MON4D3/LuaSnip"                   -- Snippet Engine for Neovim written in Lua
     use "goolord/alpha-nvim"                 -- Lua powered greeter like vim-startify / dashboard-nvim
     use "norcalli/nvim-colorizer.lua"        -- Colors highlighter for neovim
     use "lewis6991/impatient.nvim"           -- Speed up loading Lua modules to improve startup time
@@ -65,31 +64,33 @@ return packer.startup(function(use)
     use 'nvim-telescope/telescope.nvim'      -- Find, filter, preview, pick. all lua, with telescope
     use 'nvim-lua/plenary.nvim'              -- Plenary, a dependency of telescope
     use "terrortylor/nvim-comment"           -- Comment toggler for Neovim written in Lua
-    use "emakman/nvim-latex-previewer"       -- nvim-latex-previewer
     use "nvim-treesitter/nvim-treesitter"    -- Treesitter Syntax highlighting and abstraction layer
     use 'ggandor/lightspeed.nvim'            -- Fast Search
-
+    use 'lervag/vimtex'                      -- Latex completion and viewer
 
     use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }) -- markdown-preview
     use({'nvim-lualine/lualine.nvim',requires = { 'kyazdani42/nvim-web-devicons', opt = true }}) -- Cool looking icons
     use({"kylechui/nvim-surround", tag = "*", config = function() require("nvim-surround").setup({}) end }) -- Easy way to surround and delete things around a selection or inside functions
     use ({'lewis6991/gitsigns.nvim', event = { "CursorMoved", "CursorMovedI" }, config = function() require("gitsigns") end}) -- Git integration for buffers
     use({'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}) -- Buffer bars
+
     -- Snippets
---    use ({'L3MON4D3/LuaSnip'})
+    use "L3MON4D3/LuaSnip"                   -- Snippet Engine for Neovim written in Lua
+    use "saadparwaiz1/cmp_luasnip"           -- LuaSnip
+    use "rafamadriz/friendly-snippets"       -- friendly-snippets
 
-    -- Completion
-    use({'hrsh7th/nvim-cmp'})
-    use({'hrsh7th/cmp-buffer'})
-    use({'hrsh7th/cmp-path'})
-    use({'hrsh7th/cmp-nvim-lsp'})
-    use({'quangnguyen30192/cmp-nvim-ultisnips'})
-
-    -- LSP
+    -- Lsp_config
     use {
-    "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer",
+    "plenary.nvim/null-ls.nvim",
     }
+
+    -- Complition
+    use({'hrsh7th/nvim-cmp'})
+    use({'hrsh7th/cmp-path'})
+    use({'hrsh7th/cmp-buffer'})
+    use({'hrsh7th/cmp-nvim-lsp'})
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

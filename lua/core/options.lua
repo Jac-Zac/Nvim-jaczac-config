@@ -33,7 +33,6 @@ vim.cmd [[set completeopt=menuone,longest]]  -- Auto complete menu (It's pretty 
 vim.cmd [[set nocompatible]]                 -- Disable compatibility to old-time vi
 vim.cmd [[colorscheme nord]]                 -- Set colorscheme
 vim.notify = require("notify")               -- Enable notify
--- vim.g.vimtex_view_method = "zathura"         -- Viewing method
 
 ---------------
 -- Neovim UI --
@@ -42,7 +41,7 @@ set.pumheight = 15                           -- Makes popup menu smaller
 set.ruler = true              	             -- Show the cursor position all the time
 set.splitbelow = true                        -- Horizontal splits will automatically be below
 set.splitright = true                        -- Vertical splits will automatically be to the right
-set.conceallevel = 0                         -- So that I can see `` in markdown files
+set.conceallevel = 1                         -- So that I can see `` in markdown files
 set.tabstop = 4                              -- Insert 2 spaces for a tab
 set.number = true                            -- Line numbers
 set.background = "dark"                      -- Tell vim what the background color looks like
@@ -59,7 +58,7 @@ set.showtabline = 1                          -- Always show tabs
 set.cmdheight = 1                            -- More space for displaying messages
 set.numberwidth = 5                          -- Set number column width to 2 {default 4}
 set.foldenable = false                       -- Disable folding text
-vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
+-- vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
 vim.cmd [[set noshowmode]]                   -- We don't need to see things like -- INSERT -- anymore
 vim.cmd [[syntax enable]]                    -- Enables syntax highlighing
 vim.cmd [[set t_Co=256]]                     -- Support 256 colors

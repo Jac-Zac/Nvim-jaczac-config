@@ -1,6 +1,6 @@
 --[[---------------------------------------------]]--
---         init.lua - Init file of LuaVim          --
---              Author: elai, sergio               --
+--         init.lua - Init file of NVim            --
+--              Author: Jacopo Zacchinga           --
 --                 License: GPLv3                  --
 --[[---------------------------------------------]]--
 
@@ -12,7 +12,6 @@ local core_modules = {
  "core/options",           -- General Options
 
 ---- Plugin Configurations --------------------------
- "configs/LSP",            -- LSP configurations
  "configs/completion",     -- Auto Completion
  "configs/treesitter",     -- Syntax Highlighting
  "configs/impatient",      -- Improve Startup Time
@@ -27,10 +26,14 @@ local core_modules = {
  "configs/telescope",      -- Fuzzy finder
  "configs/barbar",         -- Tab-bar for the buffers
 
+---- LSP Utilities --------------------------------
+ "lsp/configs",		       --  Lsp configurations
+
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities
-
 }
+
+
 -- Using pcall we can handle better any loading issues
 for _, module in ipairs(core_modules) do
     local ok, err = pcall(require, module)
