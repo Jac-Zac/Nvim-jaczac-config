@@ -9,6 +9,7 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
+-- require("luasnip.loaders.from_snipmate").lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -17,7 +18,7 @@ end
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
 
@@ -117,9 +118,9 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "luasnip", keyword_length = 2},  -- For luasnip snippets
     { name = "nvim_lsp", keyword_length = 2},  -- For nvim-lsp
 --    { name = "ultisnips" }, -- For ultisnips user.
-    { name = "luasnip", keyword_length = 2},  -- For luasnip snippets
     { name = "path" }, -- For path completion
     { name = "buffer", keyword_length = 4 },
   },

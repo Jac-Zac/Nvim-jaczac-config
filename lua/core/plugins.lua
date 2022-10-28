@@ -66,7 +66,8 @@ return packer.startup(function(use)
     use "terrortylor/nvim-comment"                  -- Comment toggler for Neovim written in Lua
     use "nvim-treesitter/nvim-treesitter"           -- Treesitter Syntax highlighting and abstraction layer
     use 'ggandor/lightspeed.nvim'                   -- Fast Search
-    use 'lervag/vimtex'                             -- Latex completion and viewer
+    use 'lervag/vimtex'                             -- Vimtex
+    use 'muellerbernd/latex-previewer.nvim'
 
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }) -- markdown-preview
@@ -92,7 +93,7 @@ return packer.startup(function(use)
     -- Snippets
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
---    use "rafamadriz/friendly-snippets" -- friendly-snippets
+    use "rafamadriz/friendly-snippets" -- friendly-snippets
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

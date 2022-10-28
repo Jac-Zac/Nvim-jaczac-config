@@ -17,6 +17,10 @@ set.smartindent = true                       -- Makes indenting smart
 set.iskeyword:append("-")                    -- Treat dash separated words as a word text object"
 set.clipboard = "unnamedplus"                -- Copy paste between vim and everything else
 set.smarttab = true                          -- Makes tabbing smarter will realize you have 2 vs 4
+vim.cmd [[ set spell ]]
+vim.cmd [[ set spelllang=en_us ]]
+vim.cmd [[ nnoremap 99 :set invspell<CR> ]]
+
 set.expandtab = true                         -- Converts tabs to spaces
 set.autoindent = true                        -- Good auto indent
 set.autochdir = true                         -- Your working directory will always be the same as your working directory
@@ -24,20 +28,28 @@ set.incsearch = true                         -- Sets incremental search
 set.mouse = 'a'                              -- Enable mouse support
 set.shell = "/bin/zsh"                       -- Set your shell to bash or zsh
 set.shortmess:append "sI"                    -- Disable nvim intro
-vim.cmd [[set spell]]                        -- Set spellcheck
 vim.cmd [[set nobackup]]                     -- Creates a backup file
 vim.cmd [[set nowritebackup]]                -- Creates a backup file i guess
-vim.cmd [[set formatoptions-=cro]]           -- Stop newline continution of comments
+vim.cmd [[set formatoptions-=cro]]           -- Stop newline continuation of comments
 vim.cmd [[set complete+=kspell]]             -- Auto complete with spellcheck
 vim.cmd [[set completeopt=menuone,longest]]  -- Auto complete menu (It's pretty great)
 vim.cmd [[set nocompatible]]                 -- Disable compatibility to old-time vi
 vim.cmd [[colorscheme nord]]                 -- Set colorscheme
 vim.notify = require("notify")               -- Enable notify
 
+--- Vimtex configuration
+vim.cmd([[
+let g:tex_flavor='latex'
+let g:vimtex_view_method = 'skim'
+let g:vimtex_view_skim_sync = 1
+let g:vimtex_view_skim_activate = 1
+
+let g:latex_pdf_viewer="zathura"
+]])
 ---------------
 -- Neovim UI --
 ---------------
-set.pumheight = 15                           -- Makes popup menu smaller
+set.pumheight = 15                           -- Makes pop up menu smaller
 set.ruler = true              	             -- Show the cursor position all the time
 set.splitbelow = true                        -- Horizontal splits will automatically be below
 set.splitright = true                        -- Vertical splits will automatically be to the right
@@ -58,9 +70,9 @@ set.showtabline = 1                          -- Always show tabs
 set.cmdheight = 1                            -- More space for displaying messages
 set.numberwidth = 5                          -- Set number column width to 2 {default 4}
 set.foldenable = false                       -- Disable folding text
--- vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
 vim.cmd [[set noshowmode]]                   -- We don't need to see things like -- INSERT -- anymore
 vim.cmd [[set t_Co=256]]                     -- Support 256 colors
+-- vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"         -- Breaks Space-Time Continuum
 -- vim.cmd [[set nowrap]]                       -- Display long lines as just one line
 -- vim.cmd [[syntax enable]]                    -- Enables syntax highlighing
