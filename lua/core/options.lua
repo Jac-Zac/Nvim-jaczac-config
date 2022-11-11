@@ -1,8 +1,7 @@
-
 --[[------------------------------------]]--
 --       options - general settings       --
 --             Author: elai               --
---            License: GPLv3              --
+--            License: GPLv3              --options
 --[[------------------------------------]]--
 
 ----------------------
@@ -43,8 +42,6 @@ let g:tex_flavor='latex'
 let g:vimtex_view_method = 'skim'
 let g:vimtex_view_skim_sync = 1
 let g:vimtex_view_skim_activate = 1
-
-let g:latex_pdf_viewer="zathura"
 ]])
 ---------------
 -- Neovim UI --
@@ -69,13 +66,14 @@ set.shiftwidth = 4                           -- Change the number of space chara
 set.showtabline = 1                          -- Always show tabs
 set.cmdheight = 1                            -- More space for displaying messages
 set.numberwidth = 5                          -- Set number column width to 2 {default 4}
-set.foldenable = false                       -- Disable folding text
 vim.cmd [[set noshowmode]]                   -- We don't need to see things like -- INSERT -- anymore
 vim.cmd [[set t_Co=256]]                     -- Support 256 colors
+-- vim.cmd [[set nowrap]]                       -- Display long lines as just one line
 -- vim.cmd [[setlocal conceallevel=2]]          -- Syntax conceal for markdown
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"         -- Breaks Space-Time Continuum
--- vim.cmd [[set nowrap]]                       -- Display long lines as just one line
 -- vim.cmd [[syntax enable]]                    -- Enables syntax highlighing
+-- Folding
+set.foldmethod = "manual"
 
 -----------------
 -- Memory, CPU --

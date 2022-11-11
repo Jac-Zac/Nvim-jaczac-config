@@ -1,4 +1,3 @@
-
 --[[-------------------------------------]]--
 --      utils config - other settings      --
 --              Author: elai               --
@@ -82,3 +81,13 @@ vim.opt.fillchars:append { eob = " " }
 
 -- Disbale Status Line
 -- vim.api.nvim_exec([[ autocmd VimEnter * set laststatus=1]], false)
+
+-- Saved folds --
+
+vim.cmd [[
+    augroup remember_folds
+        autocmd!
+        autocmd BufWinLeave *.* mkview
+        autocmd BufWinEnter *.* silent! loadview
+    augroup END
+]]
