@@ -17,7 +17,7 @@ set.iskeyword:append("-")                    -- Treat dash separated words as a 
 set.clipboard = "unnamedplus"                -- Copy paste between vim and everything else
 set.smarttab = true                          -- Makes tabbing smarter will realize you have 2 vs 4
 vim.cmd [[ set spell ]]
-vim.cmd [[ set spelllang=en_us ]]
+vim.cmd [[ set spelllang=en_us,it ]]
 vim.cmd [[ nnoremap 99 :set invspell<CR> ]]
 
 set.expandtab = true                         -- Converts tabs to spaces

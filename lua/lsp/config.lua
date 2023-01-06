@@ -24,10 +24,24 @@ for _, server in ipairs(lsp_installer.get_installed_servers()) do
 end
 
 -- Set up Null-ls
--- local null_ls = require('null-ls')
+-- local null_ls = require("null-ls")
+--
+-- local formatting = null_ls.builtins.formatting
+--
+-- local sources = {
+-- 	formatting.eslint,
+-- 	formatting.clang_format,
+-- 	formatting.prettier,
+-- 	formatting.black,
+-- 	-- formatting.latexindent,
+-- }
+--
 -- null_ls.setup({
---   sources = {
---     -- snippets support
---     null_ls.builtins.completion.luasnip
---   },
+-- 	sources = sources,
+--
+-- 	on_attach = function(client)
+-- 		if client.resolved_capabilities.document_formatting then
+-- 			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()")
+-- 		end
+-- 	end,
 -- })

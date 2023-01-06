@@ -22,8 +22,7 @@ map("n", "<F2>", ":setlocal spell spelllang=it<CR>", {})
 map("n", "<F3>", ":NvimTreeOpen<CR>", {})
 map("n", "<F4>", ":MarkdownPreview<CR>", {})
 map("n", "<F5>", ": silent ! zathura $(echo % <bar> sed 's/.tex/.pdf/') & <CR>", {})
-map("n", "<F6>", ": silent ! $(./%) <CR>", {})
-
+map("n", "<F6>", ":! ./% <CR>", {})
 
 -- Mappings for moving through splits
 map("n", "<A-h>", "<C-w>h", {})
