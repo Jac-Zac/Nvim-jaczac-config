@@ -9,6 +9,10 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
+-- Remap movement
+map("n","<C-d>", "<C-d>zz")
+map("n","<C-u>", "<C-u>zz")
+
 -- Remap space as leader key
 map("", "<Space>", "<Nop>", {})
 vim.g.mapleader = " "
