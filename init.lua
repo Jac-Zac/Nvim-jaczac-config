@@ -24,6 +24,7 @@ local core_modules = {
  "configs/neoscroll",      -- Smooth Scrolling
  "configs/telescope",      -- Fuzzy finder
  "configs/barbar",         -- Tab-bar for the buffers
+ "configs/terminal",       -- Terminal
 
 ---- LSP Utilities --------------------------------
  "lsp/install",            -- Configuration for lsp-install

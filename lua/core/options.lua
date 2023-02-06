@@ -75,6 +75,36 @@ vim.cmd [[set t_Co=256]]                     -- Support 256 colors
 -- Folding
 set.foldmethod = "manual"
 
+-- Set blends.
+vim.cmd "set winblend=5"
+vim.cmd "set pumblend=5"
+
+-- Make the cmdline disappear when not in use.
+vim.cmd('set cmdheight=0')
+vim.cmd('set noshowmode')
+
+-- Show matching brackets.
+vim.cmd('set showmatch')
+
+-- Disable VM exit message and statusline.
+vim.g.VM_set_statusline = 0
+vim.g.VM_silent_exit = 1
+
+-- Neovim fill characters.
+vim.opt.fillchars = {
+    -- horiz = '―',
+    -- horizup = '―',
+    horiz = '⎯',
+    horizup = '⎯',
+    horizdown = ' ',
+    vert = ' ',
+    vertleft  = ' ',
+    vertright = ' ',
+    verthoriz = ' ',
+    eob = ' ',
+    diff = '╱'
+}
+
 -----------------
 -- Memory, CPU --
 -----------------

@@ -111,6 +111,8 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip") -- Snippets plugin
 	use("rafamadriz/friendly-snippets") -- friendly-snippets
 
+    -- Terminal
+    use 'akinsho/toggleterm.nvim'
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
