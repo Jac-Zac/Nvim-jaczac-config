@@ -12,10 +12,23 @@ require'bufferline'.setup {
   -- Enable/disable close button
   closable = true,
 
-  -- Enables/disable clickable tabs
-  --  - left-click: go to buffer
-  --  - middle-click: delete buffer
-  clickable = true,
+  highlight_inactive_file_icons = true,
+   diagnostics = {
+      {   -- Error.
+          enabled = true,
+          icon = ' '
+      },
+      {   -- Warning,
+          enabled = false,
+          icon = ' '
+      },
+      {   -- Info.
+          enabled = false
+      },
+      {   -- Hint.
+          enabled = false,
+      },
+  },
 
   -- Excludes buffers from the tabline
   exclude_ft = {'javascript'},
@@ -34,18 +47,17 @@ require'bufferline'.setup {
 
   -- Configure icons on the bufferline.
   icon_separator_active = '▎',
-  icon_separator_inactive = '▎',
-  icon_close_tab = '',
+  icon_close_tab = ' ',
   icon_close_tab_modified = '●',
+  icon_separator_inactive = ' ',
   icon_pinned = '車',
+  minimum_padding = 1,
+  maximum_padding = 5,
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
   insert_at_end = false,
   insert_at_start = false,
-
-  -- Sets the maximum padding width with which to surround each tab
-  maximum_padding = 1,
 
   -- Sets the maximum buffer name length.
   maximum_length = 30,
