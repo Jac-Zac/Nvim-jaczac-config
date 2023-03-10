@@ -27,10 +27,9 @@ local core_modules = {
  "configs/terminal",       -- Terminal
 
 ---- LSP Utilities --------------------------------
- "lsp/install",            -- Configuration for lsp-install
- "lsp/config",             -- Configuration for lspconfig
- "lsp/completion",         -- Auto Completion
- "lsp/handlers",           -- Beautify
+ "lsp/lsp_zero_config",        -- Automatica setup config
+ -- "lsp/completion",         -- Auto Completion
+ -- "lsp/handlers",           -- Beautify
 
 ---- Other Utilities --------------------------------
  "utils/utils",            -- Utilities

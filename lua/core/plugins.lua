@@ -94,23 +94,28 @@ return packer.startup(function(use)
 	}) -- Git integration for buffers
 	use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } }) -- Buffer bars
 
-	-- Lsp
-	use({
-		"williamboman/nvim-lsp-installer",
-		"neovim/nvim-lspconfig",
-	})
+    use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v1.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {'williamboman/mason.nvim'},           -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-	-- Complition
-	use({ "hrsh7th/nvim-cmp" })
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-path" })
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},         -- Required
+        {'hrsh7th/cmp-nvim-lsp'},     -- Required
+        {'hrsh7th/cmp-buffer'},       -- Optional
+        {'hrsh7th/cmp-path'},         -- Optional
+        {'saadparwaiz1/cmp_luasnip'}, -- Optional
+        {'hrsh7th/cmp-nvim-lua'},     -- Optional
 
-	-- Snippets
-	use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
-	use("L3MON4D3/LuaSnip") -- Snippets plugin
-	use("rafamadriz/friendly-snippets") -- friendly-snippets
-
+        -- Snippets
+        {'L3MON4D3/LuaSnip'},             -- Required
+        {'rafamadriz/friendly-snippets'}, -- Optional
+      }
+    }
     -- Terminal
     use 'akinsho/toggleterm.nvim'
 	-- Automatically set up your configuration after cloning packer.nvim
