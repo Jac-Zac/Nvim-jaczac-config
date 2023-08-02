@@ -14,7 +14,7 @@ local core_modules = {
 ---- Plugin Configurations --------------------------
  "configs/treesitter",     -- Syntax Highlighting
  "configs/impatient",      -- Improve Startup Time
- "configs/nvimtree",       -- File Explorer
+ -- "configs/nvimtree",       -- File Explorer
  "configs/markdown",       -- General configurations
  "configs/alpha",          -- Wellcome Screen
  "configs/gitsigns",       -- Git Integration
@@ -23,7 +23,7 @@ local core_modules = {
  "configs/colorizer",      -- Colors Highlighter
  "configs/neoscroll",      -- Smooth Scrolling
  "configs/telescope",      -- Fuzzy finder
- "configs/barbar",         -- Tab-bar for the buffers
+ -- "configs/barbar",         -- Tab-bar for the buffers
  "configs/terminal",       -- Terminal
 
 ---- LSP Utilities --------------------------------
